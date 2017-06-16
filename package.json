@@ -4,7 +4,8 @@
   "description": "Тестовое задание. Frontend JavaScript/React developer.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./index.js"
+    "dev": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./index.js",
+    "migrate": "db-migrate up --config ./modules/config/data/common/db.json -e main"
   },
   "author": "Dmitry <balakovd@gmail.com>",
   "license": "ISC",
@@ -16,13 +17,31 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "jquery": "^3.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-middleware": "^1.10.2",
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "db-migrate": "^0.10.0-beta.20",
+    "db-migrate-pg": "^0.1.11",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "pg": "^6.2.4",
+    "zatanna": "^0.6.3"
   }
 }

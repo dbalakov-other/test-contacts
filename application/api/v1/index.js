@@ -60,5 +60,5 @@ const applyMethod = (method)=> {
 };
 
 const applyRoute = (application, prefix)=> {
-    return (route, namespace)=> (route(application, `${prefix}${namespace}`));
+    return (route, namespace)=> (route(application, `${prefix}${namespace || ''}`));
 };

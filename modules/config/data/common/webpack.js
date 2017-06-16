@@ -1,5 +1,7 @@
 import path from 'path';
 
+import webpack from 'webpack';
+
 export default {
     entry: [
         'whatwg-fetch',
@@ -8,8 +10,10 @@ export default {
     ],
     module: {
         loaders: [
-            { test: /\.less$/, loader: 'style!css!less' },
-            { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: [ 'es2015', 'react', 'stage-0' ] } }
+            { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: [ 'es2015', 'react', 'stage-0' ] } },
+            { test: /\.css/, loader: 'style-loader!css-loader' },
+            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url-loader?limit=10000' },
+            { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' }
         ]
     },
     output: {
@@ -22,5 +26,11 @@ export default {
             path.join(process.cwd(), 'node_modules'),
             path.join(process.cwd(), 'application', 'assets')
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 };
