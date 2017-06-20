@@ -17,7 +17,7 @@ export default {
         ]
     },
     output: {
-        path: '/',
+        path: path.join(process.cwd(), 'target', 'application', 'static', 'assets'),
         filename: 'index.js',
         publicPath: '/assets/'
     },

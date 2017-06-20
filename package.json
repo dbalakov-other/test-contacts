@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./index.js",
     "fill-db": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./scripts/fill-db/index.js",
-    "migrate": "db-migrate up --config ./modules/config/data/common/db.json -e main"
+    "migrate": "db-migrate up --config ./modules/config/data/common/db.json -e main",
+    "compile": "./compile/index.sh"
   },
   "author": "Dmitry <balakovd@gmail.com>",
   "license": "ISC",
