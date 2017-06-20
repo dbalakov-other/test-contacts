@@ -4,7 +4,7 @@ export default {
     width: "24px",
     height: "24px",
     version: "1.1",
-    fill: '#FFFFFF',
+    fill: '#888888',
     viewBox: "0 0 24 24",
     className: "inshel-search-icon"
 };

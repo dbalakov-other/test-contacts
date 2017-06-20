@@ -1,0 +1,1 @@
+export default (max)=> (Math.round(Math.random() * max));

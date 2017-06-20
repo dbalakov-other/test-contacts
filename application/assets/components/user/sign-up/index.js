@@ -45,7 +45,6 @@ class SignUp extends React.Component {
     }
 
     onSignUp() {
-        console.log('SU, OnSU');
         const { name, surname, email, password } = this.refs;
         const { onSignUp } = this.props;
 

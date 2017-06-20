@@ -1,8 +1,7 @@
 import User from 'data/actions/user';
 
 const initialState = {
-    state: 'start',
-    actual: null
+    state: 'start'
 };
 
 export default (state = initialState, action = {})=> {

@@ -10,7 +10,11 @@ class Users {
     }
 
     signIn(data) {
-        return this.api.fetch('/api/login', { method: 'POST', body: JSON.stringify(data) });
+        return this.api.fetch('/api/login', { method: 'POST', body: JSON.stringify(data) }).then((result)=> {
+            this.api.emit('tokenChanged', result.token);
+            
+            return result;
+        });
     }
 }
 

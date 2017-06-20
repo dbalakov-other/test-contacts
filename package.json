@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./index.js",
+    "fill-db": "NODE_PATH=modules ./node_modules/.bin/babel-node --presets es2015,es2017,stage-0 ./scripts/fill-db/index.js",
     "migrate": "db-migrate up --config ./modules/config/data/common/db.json -e main"
   },
   "author": "Dmitry <balakovd@gmail.com>",
@@ -23,6 +24,7 @@
     "jquery": "^3.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
+    "qrcode": "^0.8.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",

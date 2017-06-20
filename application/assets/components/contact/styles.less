@@ -1,0 +1,70 @@
+.app-contact {
+  display: flex;
+  flex-direction: column;
+  height: 64px;
+  border-top: solid 1px #dddddd;
+  border-bottom: solid 1px #dddddd;
+  color: #555555;
+  transition: margin 100ms;
+}
+
+.app-contact-opened {
+  margin: 24px 0;
+  height: auto !important;
+  border-bottom: none;
+  box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 13px 19px 2px rgba(0,0,0,.14), 0 5px 24px 4px rgba(0,0,0,.12);
+}
+
+.app-contact-header {
+  position: relative;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  padding: 0 24px 0 54px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.app-contact-header-icon {
+  position: absolute;
+  left: ~'calc(100% - 36px)';
+  top: 6px;
+}
+
+.app-contact-header-icon-edit {
+  position: absolute;
+  left: 24px;
+  top: 6px;
+}
+
+.app-contact-body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  white-space: nowrap;
+  overflow-y: hidden;
+  font-size: 16px;
+  padding: 0 24px;
+}
+
+.app-contact-body > div {
+  margin-right: 12px;
+}
+
+.app-contact-body > div > a {
+  cursor: pointer;
+}
+
+.app-contact-body-opened {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-contact-body-opened > div {
+  border-bottom: solid 1px #dddddd;
+  padding: 8px 24px;
+}
+
+.app-contact-body-opened > div > a {
+  cursor: pointer;
+}

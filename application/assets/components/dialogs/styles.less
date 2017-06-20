@@ -1,0 +1,26 @@
+.app-dialog-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+}
+
+.app-dialog-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: ~'calc(100% - 64px)';
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: solid 1px #ffffff;
+  cursor: pointer;
+}

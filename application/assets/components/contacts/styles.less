@@ -1,0 +1,68 @@
+.app-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-contacts-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 64px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.app-contacts-header-q {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+  margin: 0 0 0 12px;
+}
+
+.app-contacts-header-q > div {
+  width: 100%;
+}
+
+.app-contacts-header-sign-out {
+  display: flex;
+  width: 64px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.app-contacts-list {
+  width: 100%;
+  margin-top: 64px;
+}
+
+.app-contacts-loading {
+  position: relative;
+  left: 50%;
+  margin-left: -32px;
+}
+
+.app-contacts-main-action {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  left: ~'calc(100% - 84px)';
+  top: ~'calc(100% - 84px)';
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.app-contacts-main-action:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 6px 10px rgba(0, 0, 0, 0.28);
+}

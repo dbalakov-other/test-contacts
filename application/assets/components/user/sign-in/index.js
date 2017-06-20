@@ -11,10 +11,10 @@ class SignIn extends React.Component {
                 <div className="app-user-modal-form">
                     {error ? (<label className="control-label text-danger">{error}</label>) : null}
                     <div className="input-group">
-                        <input {...disabled} ref="email" type="text" className="form-control" placeholder="Email" />
+                        <input {...disabled} ref="email" type="text" className="form-control" placeholder="Email" onKeyDown={(e)=>(this.onKeyUp(e))} />
                     </div>
                     <div className="input-group">
-                        <input {...disabled} ref="password" type="password" className="form-control" placeholder="Пароль" />
+                        <input {...disabled} ref="password" type="password" className="form-control" placeholder="Пароль" onKeyDown={(e)=>(this.onKeyUp(e))} />
                     </div>                    
                 </div>
                 <div className="app-user-modal-actions">
@@ -45,6 +45,13 @@ class SignIn extends React.Component {
             email: email.value,
             password: password.value
         });
+    }
+
+    onKeyUp(e) {
+        const { email, password } = this.refs;
+        if (e.keyCode !== 13 || email.value == '' || password.value == '') { return; }
+
+        this.onSignIn();
     }
 
     check() {
